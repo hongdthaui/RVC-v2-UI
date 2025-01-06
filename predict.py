@@ -59,8 +59,8 @@ class Predictor(BasePredictor):
         ),
         f0_method: str = Input(
             description="Pitch detection algorithm. 'rmvpe' for clarity in vocals, 'mangio-crepe' for smoother vocals.",
-            default="rmvpe",
-            choices=["rmvpe", "mangio-crepe"],
+            default="harvest",
+            choices=["harvest", "rmvpe", "mangio-crepe"],
         ),
         crepe_hop_length: int = Input(
             description="When `f0_method` is set to `mangio-crepe`, this controls how often it checks for pitch changes in milliseconds.",
